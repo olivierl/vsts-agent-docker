@@ -1,14 +1,6 @@
 # VSTS Agent
 
-Docker image for running browser tests against headless Chromium
+Based on the official [microsoft/vsts-agent](https://github.com/microsoft/vsts-agent-docker/blob/master/ubuntu/16.04/docker/17.12.0-ce/standard/Dockerfile) +
 
-``` bash
-# Build
-docker build -t vsts-agent:dotnet-2.1-preview1 .
-
-# Tag
-docker tag vsts-agent:dotnet-2.1-preview1 olivierl/vsts-agent:dotnet-2.1-preview1
-
-# Push
-docker push olivierl/vsts-agent:dotnet-2.1-preview1
-```
+* .NET Core 2.1 preview 1
+* Yarn

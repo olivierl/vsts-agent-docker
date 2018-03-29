@@ -15,6 +15,7 @@ RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add - \
     && apt-get update \
     && apt-get install -y yarn \
     && rm -rf /var/lib/apt/lists/*
+ENV yarn=/usr/bin/yarn
 
 # Install Google Chrome
 RUN wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add - \
@@ -22,3 +23,4 @@ RUN wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-ke
     && apt-get update \
     && apt-get -y install google-chrome-stable \
     && rm -rf /var/lib/apt/lists/*
+ENV chrome=/usr/bin/google-chrome

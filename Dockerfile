@@ -1,12 +1,11 @@
 FROM microsoft/vsts-agent:ubuntu-16.04-docker-17.12.0-ce-standard
 
-# Install .NET Core 2.1 preview 2
-RUN curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg \
-    && mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg \
-    && sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/microsoft-ubuntu-xenial-prod xenial main" > /etc/apt/sources.list.d/dotnetdev.list' \
+# Install .NET Core 2.1 RC1
+RUN wget -q packages-microsoft-prod.deb https://packages.microsoft.com/config/ubuntu/16.04/packages-microsoft-prod.deb \
+    && dpkg -i packages-microsoft-prod.deb \
     && apt-get install -y apt-transport-https \
     && apt-get update \
-    && apt-get install -y dotnet-sdk-2.1.300-preview2-008533 \
+    && apt-get install -y dotnet-sdk-2.1.300-rc1-008673 \
     && rm -rf /var/lib/apt/lists/*
 
 # Install Yarn

@@ -4,6 +4,5 @@ Based on the official [microsoft/vsts-agent](https://github.com/microsoft/vsts-a
 
 Extra:
 
-* .NET Core SDK 2.1 RC1
-* Yarn
-* Google Chrome
+- Yarn
+- Google Chrome

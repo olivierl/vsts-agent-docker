@@ -1,11 +1,6 @@
 FROM microsoft/vsts-agent:ubuntu-16.04-docker-17.12.0-ce-standard
 
-# Install Yarn
-RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add - \
-    && echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list \
-    && apt-get update \
-    && apt-get install -y yarn \
-    && rm -rf /var/lib/apt/lists/*
+# Add Yarn capability
 ENV yarn=/usr/bin/yarn
 
 # Install Google Chrome

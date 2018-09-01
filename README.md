@@ -4,5 +4,4 @@ Based on the official [microsoft/vsts-agent](https://github.com/microsoft/vsts-a
 
 Extra:
 
-- Yarn
 - Google Chrome

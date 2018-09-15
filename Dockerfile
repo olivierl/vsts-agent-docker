@@ -10,3 +10,8 @@ RUN wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-ke
     && apt-get -y install google-chrome-stable \
     && rm -rf /var/lib/apt/lists/*
 ENV chrome=/usr/bin/google-chrome
+
+# Install Cypress dependencies
+RUN apt-get update \
+    && apt-get -y install xvfb libgtk2.0-0 libnotify-dev libgconf-2-4 libnss3 libxss1 libasound2 \
+    && rm -rf /var/lib/apt/lists/*

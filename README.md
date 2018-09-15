@@ -5,3 +5,4 @@ Based on the official [microsoft/vsts-agent](https://github.com/microsoft/vsts-a
 Extra:
 
 - Google Chrome
+- Cypress [dependencies](https://docs.cypress.io/guides/guides/continuous-integration.html#Dependencies)
